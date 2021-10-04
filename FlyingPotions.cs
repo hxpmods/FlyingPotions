@@ -11,7 +11,7 @@ namespace FlyingPotions
 	{
 		public const string pluginGuid = "potioncraft.hxp.flyingPotions";
 		public const string pluginName = "Levitation Sensation";
-		public const string pluginVersion = "0.0.0.1";
+		public const string pluginVersion = "0.0.0.2";
 
 		public void Awake()
 		{		
@@ -40,19 +40,29 @@ namespace FlyingPotions
 				{
 					//Access this array according to the amount of flying effects in the released potion.
 					//0 flying effects = 1.0f = default gravity.
-					float[] gravityValues = { 1.0f, 0.075F, 0F, -0.075F };
+					float[] gravityValues = { 1.0f, 0.075F, 0F, -0.075F,-0.2f,-1.0f };
 
 					Potion potion = potionItem.inventoryItem as Potion;
-					var id = 0;
-					foreach (PotionEffect effect in potion.effects)
-					{
-						if (effect.name == "Fly")
-						{
-							id += 1;
-						}
-					}
 
-					potionItem.SetGravityScale(gravityValues[id]);
+					if (potion != null) //It maybe possible to acquire empty potions at somepoint.
+					{
+
+						var id = 0;
+						foreach (PotionEffect effect in potion.effects)
+						{
+							if (effect.name == "Fly")
+							{
+								id += 1;
+							}
+						}
+
+						//On the off chance a potion has more than 5 effects.
+						if (id < gravityValues.Length)
+						{
+							potionItem.SetGravityScale(gravityValues[id]);
+						}
+
+					}
 				}
 			}
 
