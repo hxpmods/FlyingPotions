@@ -8,5 +8,7 @@
  # TODO
  
  -Create Mod Config. (Want *all* your potions up in the air?)
+ 
  -Make Bounce Potions Bounce. (Probably not.)
+ 
  -Make Stone Skin Potions Heavier? (May as well.)
