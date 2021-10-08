@@ -6,6 +6,9 @@
  Each level of Levitation in a potion will increases it's lift, from lighter than a normal potion, to floating on the ceiling.
  Does *not* affect placing the Potion on the scales.
  
+ ![Image 4](https://user-images.githubusercontent.com/91914593/136607086-6d686c9f-1359-4080-a026-9b38cd4ec1e7.PNG)
+
+ 
 ## Installation:
 
 The latest release can be found on the releases tab to the right.
