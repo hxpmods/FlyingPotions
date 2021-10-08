@@ -11,6 +11,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="BasicMod">
+      <HintPath>..\..\PotionCraftDLLs\BasicMod.dll</HintPath>
+    </Reference>
     <Reference Include="BepInEx">
       <HintPath>..\BepInEx.dll</HintPath>
     </Reference>
